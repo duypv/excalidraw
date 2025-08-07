@@ -140,6 +140,18 @@ export default defineConfig(({ mode }) => {
         },
 
         workbox: {
+          import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
+// Other imports...
+
+export default defineConfig({
+  plugins: [
+    // Other plugins...
+    VitePWA({
+      // Existing PWA options...
+      workbox: {
+          // Add or update this line:
+          maximumFileSizeToCacheInBytes: 4000000 // Set to 4 MB (4,000,000 bytes) or higher to cover your bundle size. Adjust as needed.
           // don't precache fonts, locales and separate chunks
           globIgnores: [
             "fonts.css",
