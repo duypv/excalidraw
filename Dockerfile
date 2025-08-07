@@ -4,8 +4,6 @@ WORKDIR /opt/node_app
 
 COPY . .
 
-RUN yarn add vite@latest
-
 # do not ignore optional dependencies:
 # Error: Cannot find module @rollup/rollup-linux-x64-gnu
 RUN --mount=type=cache,target=/root/.cache/yarn \
