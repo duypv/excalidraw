@@ -89,6 +89,7 @@
     "clean-install": "yarn rm:node_modules && yarn install"
   },
   "resolutions": {
-    "strip-ansi": "6.0.1"
+    "strip-ansi": "6.0.1",
+    "esbuild": "0.24.0"
   }
 }
