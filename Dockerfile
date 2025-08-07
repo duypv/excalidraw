@@ -11,6 +11,8 @@ RUN --mount=type=cache,target=/root/.cache/yarn \
 
 ARG NODE_ENV=production
 
+RUN npx update-browserslist-db@latest
+
 RUN npm_config_target_arch=${TARGETARCH} yarn build:app:docker
 
 FROM --platform=${TARGETPLATFORM} nginx:1.27-alpine
